@@ -49,23 +49,23 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-5 gap-8">
+      <div className="container mx-auto px-3 lg:px-4 py-8 lg:py-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6"
+              className="mb-4 lg:mb-6"
             >
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center space-x-2 mb-3 lg:mb-4">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
-                  <ChefHat className="w-6 h-6 text-white" />
+                  <ChefHat className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold">ScalePOS</span>
+                <span className="text-xl lg:text-2xl font-bold">ScalePOS</span>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-sm lg:text-base text-gray-400 leading-relaxed mb-4 lg:mb-6">
                 The complete restaurant management solution. Streamline operations, 
                 track orders, manage GST compliance, and boost profitability with our 
                 cloud-based POS system.
@@ -77,19 +77,19 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="space-y-3"
+              className="space-y-2 lg:space-y-3"
             >
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">support@scalepos.com</span>
+                <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <span className="text-sm lg:text-base text-gray-400">support@scalepos.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">+91 98765 43210</span>
+                <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <span className="text-sm lg:text-base text-gray-400">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-400">Mumbai, Maharashtra, India</span>
+                <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <span className="text-sm lg:text-base text-gray-400">Mumbai, Maharashtra, India</span>
               </div>
             </motion.div>
           </div>
@@ -100,13 +100,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Product</h3>
-            <ul className="space-y-2">
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-blue-400">Product</h3>
+            <ul className="space-y-1 lg:space-y-2">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -121,13 +121,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Support</h3>
-            <ul className="space-y-2">
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-indigo-400">Support</h3>
+            <ul className="space-y-1 lg:space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -142,13 +142,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
-            <ul className="space-y-2">
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-cyan-400">Company</h3>
+            <ul className="space-y-1 lg:space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                    className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -163,23 +163,23 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-12 pt-8 border-t border-gray-800"
+          className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-800"
         >
-          <div className="max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">
+          <div className="max-w-md mx-auto lg:mx-0">
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-center lg:text-left">Stay Updated</h3>
+            <p className="text-sm lg:text-base text-gray-400 mb-3 lg:mb-4 text-center lg:text-left">
               Get the latest updates on new features and restaurant management tips.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-orange-500 text-white"
+                className="flex-1 px-3 lg:px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white text-sm lg:text-base"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 lg:px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-shadow text-sm lg:text-base mobile-btn"
               >
                 Subscribe
               </motion.button>
@@ -190,13 +190,13 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-3 lg:px-4 py-4 lg:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0"
+              className="text-gray-400 text-xs lg:text-sm mb-3 md:mb-0 text-center md:text-left"
             >
               © 2025 ScalePOS. All rights reserved.
             </motion.div>
@@ -205,18 +205,18 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="flex space-x-1"
+              className="flex flex-wrap justify-center space-x-1 mb-3 md:mb-0"
             >
               {footerLinks.legal.map((link, index) => (
                 <React.Fragment key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-xs lg:text-sm"
                   >
                     {link.name}
                   </a>
                   {index < footerLinks.legal.length - 1 && (
-                    <span className="text-gray-600 mx-2">•</span>
+                    <span className="text-gray-600 mx-1 lg:mx-2">•</span>
                   )}
                 </React.Fragment>
               ))}
@@ -226,7 +226,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="flex space-x-4 mt-4 md:mt-0"
+              className="flex space-x-3 lg:space-x-4"
             >
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -236,7 +236,7 @@ const Footer = () => {
                   whileTap={{ scale: 0.9 }}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 lg:w-5 lg:h-5" />
                 </motion.a>
               ))}
             </motion.div>

@@ -98,22 +98,22 @@ const Features = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-12 lg:py-20 bg-gray-50 mobile-section">
+      <div className="container mx-auto px-3 lg:px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 px-2">
             Everything You Need to Run Your
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
               {' '}Restaurant
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 lg:px-0">
             Our comprehensive restaurant management system provides all the tools you need 
             to streamline operations, increase efficiency, and boost profitability.
           </p>
@@ -123,7 +123,7 @@ const Features = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
         >
           {features.map((feature, index) => (
             <motion.div
@@ -133,17 +133,17 @@ const Features = () => {
                 scale: 1.05,
                 transition: { duration: 0.2 }
               }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl p-4 lg:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 mobile-card"
             >
-              <div className={`inline-flex p-4 rounded-lg bg-gradient-to-r ${feature.color} mb-6`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className={`inline-flex p-3 lg:p-4 rounded-lg bg-gradient-to-r ${feature.color} mb-4 lg:mb-6`}>
+                <feature.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
@@ -154,12 +154,12 @@ const Features = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center mt-16"
+          className="text-center mt-8 lg:mt-16 px-4"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow mobile-btn"
           >
             Explore All Features
           </motion.button>
