@@ -1,8 +1,6 @@
-import React from 'react';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Demo from './components/Demo';
-import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import DemoPopup from './components/DemoPopup';
 
@@ -12,7 +10,7 @@ function App() {
       <Hero />
       <Features />
       <Demo />
-      <Testimonials />
+      {/*<Testimonials />*/}
       <Footer />
       <DemoPopup />
     </div>

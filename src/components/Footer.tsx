@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="w-full px-3 lg:px-4 py-8 lg:py-16">
+      <div className="w-full max-w-7xl mx-auto px-3 lg:px-4 py-8 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-2">
@@ -157,40 +157,11 @@ const Footer = () => {
             </ul>
           </motion.div>
         </div>
-
-        {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-8 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-800"
-        >
-          <div className="max-w-md mx-auto lg:mx-0">
-            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-center lg:text-left">Stay Updated</h3>
-            <p className="text-sm lg:text-base text-gray-400 mb-3 lg:mb-4 text-center lg:text-left">
-              Get the latest updates on new features and restaurant management tips.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 lg:px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white text-sm lg:text-base"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 lg:px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-shadow text-sm lg:text-base mobile-btn"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="w-full px-3 lg:px-4 py-4 lg:py-6">
+        <div className="w-full max-w-7xl mx-auto px-3 lg:px-4 py-4 lg:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

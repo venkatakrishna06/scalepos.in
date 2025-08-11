@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Tablet, 
+import {
   Smartphone, 
-  Monitor, 
-  Play,
+  Monitor,
   ChefHat,
   Clock,
   CheckCircle,
@@ -73,7 +71,7 @@ const Demo = () => {
 
   return (
     <section className="py-12 lg:py-20 bg-white mobile-section">
-      <div className="w-full px-3 lg:px-4">
+      <div className="w-full max-w-7xl mx-auto px-3 lg:px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -314,21 +312,21 @@ const Demo = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center mt-8 lg:mt-16 px-4"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center space-x-2 mx-auto mobile-btn"
-          >
-            <Play className="w-4 h-4 lg:w-5 lg:h-5" />
-            <span>Request Live Demo</span>
-          </motion.button>
-        </motion.div>
+        {/*<motion.div*/}
+        {/*  initial={{ opacity: 0, y: 30 }}*/}
+        {/*  animate={inView ? { opacity: 1, y: 0 } : {}}*/}
+        {/*  transition={{ delay: 0.6, duration: 0.8 }}*/}
+        {/*  className="text-center mt-8 lg:mt-16 px-4"*/}
+        {/*>*/}
+        {/*  <motion.button*/}
+        {/*    whileHover={{ scale: 1.05 }}*/}
+        {/*    whileTap={{ scale: 0.95 }}*/}
+        {/*    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center space-x-2 mx-auto mobile-btn"*/}
+        {/*  >*/}
+        {/*    <Play className="w-4 h-4 lg:w-5 lg:h-5" />*/}
+        {/*    <span>Request Live Demo</span>*/}
+        {/*  </motion.button>*/}
+        {/*</motion.div>*/}
       </div>
     </section>
   );

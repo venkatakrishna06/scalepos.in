@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -52,7 +52,7 @@ const DemoPopup = () => {
             </div>
 
             {/* Form Content */}
-            <div className="h-[700px] lg:h-[800px]">
+            <div className="h-[900px] lg:h-[640px]">
               <iframe
                 src="https://golden-name-f02.notion.site/ebd/24c3b9bbb13c8000aa67f1ac3ea2b63f"
                 width="100%"

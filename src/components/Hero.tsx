@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ChefHat, Cloud, Smartphone, TrendingUp, ArrowRight } from 'lucide-react';
 
@@ -33,7 +32,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="w-full px-3 py-8 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-3 py-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
