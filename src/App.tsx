@@ -4,6 +4,7 @@ import Features from './components/Features';
 import Demo from './components/Demo';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import DemoPopup from './components/DemoPopup';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Demo />
       <Testimonials />
       <Footer />
+      <DemoPopup />
     </div>
   );
 }

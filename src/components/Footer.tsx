@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-3 lg:px-4 py-8 lg:py-16">
+      <div className="w-full px-3 lg:px-4 py-8 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-2">
@@ -190,7 +190,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-3 lg:px-4 py-4 lg:py-6">
+        <div className="w-full px-3 lg:px-4 py-4 lg:py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

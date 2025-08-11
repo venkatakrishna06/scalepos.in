@@ -67,7 +67,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-12 lg:py-20 bg-gradient-to-br from-blue-50 to-indigo-50 mobile-section">
-      <div className="container mx-auto px-3 lg:px-4">
+      <div className="w-full px-3 lg:px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}

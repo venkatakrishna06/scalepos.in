@@ -33,7 +33,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto px-3 py-8 relative z-10">
+      <div className="w-full px-3 py-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -81,23 +81,16 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-3 lg:gap-4 px-2 lg:px-0"
+              className="flex justify-center lg:justify-start px-2 lg:px-0"
             >
               <motion.button
+                onClick={() => window.dispatchEvent(new CustomEvent('openDemoPopup'))}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-shadow mobile-btn"
               >
-                <span>Start Free Trial</span>
+                <span>Request Live Demo</span>
                 <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-gray-300 text-gray-700 px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg hover:border-blue-600 hover:text-blue-600 transition-colors mobile-btn"
-              >
-                Watch Demo
               </motion.button>
             </motion.div>
 
