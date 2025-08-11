@@ -38,8 +38,14 @@ const DemoPopup = () => {
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
-          ></motion.div>
-              
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 lg:p-6 flex items-center justify-between">
+              <div>
+                <h2 className="text-xl lg:text-2xl font-bold">Request Live Demo</h2>
+                <p className="text-blue-100 text-sm lg:text-base mt-1">
+                  Fill out the form below and we'll get back to you shortly
+                </p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.1 }}
