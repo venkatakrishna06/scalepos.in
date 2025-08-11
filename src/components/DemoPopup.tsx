@@ -39,21 +39,15 @@ const DemoPopup = () => {
             className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 lg:p-6 flex items-center justify-between">
-              <div>
-                <h2 className="text-xl lg:text-2xl font-bold">Request Live Demo</h2>
-                <p className="text-blue-100 text-sm lg:text-base mt-1">
-                  Fill out the form below and we'll get back to you shortly
-                </p>
-              </div>
+            {/* Close Button */}
+            <div className="absolute top-4 right-4 z-10">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={closePopup}
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-colors"
+                className="bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors shadow-lg"
               >
-                <X className="w-5 h-5 lg:w-6 lg:h-6" />
+                <X className="w-5 h-5 lg:w-6 lg:h-6 text-gray-600" />
               </motion.button>
             </div>
 
