@@ -81,7 +81,7 @@ const Footer = () => {
             >
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
-                <span className="text-sm lg:text-base text-gray-400">support@scalepos.com</span>
+                <span className="text-sm lg:text-base text-gray-400">support@scalepos.in</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
