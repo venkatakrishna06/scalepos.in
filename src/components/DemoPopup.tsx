@@ -52,7 +52,7 @@ const DemoPopup = () => {
             </div>
 
             {/* Form Content */}
-            <div className="h-[600px] lg:h-[700px]">
+            <div className="h-[700px] lg:h-[800px]">
               <iframe
                 src="https://golden-name-f02.notion.site/ebd/24c3b9bbb13c8000aa67f1ac3ea2b63f"
                 width="100%"
