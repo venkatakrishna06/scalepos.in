@@ -161,9 +161,10 @@ const Features = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
               {[
                 { icon: Clock, title: "Real-time Updates", desc: "Live sync across all devices" },
+                { icon: Shield, title: "Bank-Grade Security", desc: "99.9% uptime guarantee" },
                 { icon: Zap, title: "Lightning Fast", desc: "Optimized for speed" }
               ].map((item, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 lg:p-6 shadow-md text-center sm:col-span-1 lg:col-start-2">
+                <div key={index} className="bg-white rounded-lg p-4 lg:p-6 shadow-md text-center">
                   <div className="inline-flex p-3 rounded-lg bg-gray-100 mb-3">
                     <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-gray-600" aria-hidden="true" />
                   </div>
@@ -193,9 +194,9 @@ const Features = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow"
-                aria-label="Request free demo of ScalePOS"
+                aria-label="Start free trial of ScalePOS"
               >
-                Request Free Demo Now
+                Start Your Free Trial Now
               </motion.button>
             </div>
           </motion.div>
