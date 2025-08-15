@@ -151,7 +151,7 @@ const Testimonials = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow mobile-btn"
             >
-              Start Free Trial
+              Request Free Demo
             </motion.button>
           </div>
         </motion.div>

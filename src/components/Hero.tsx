@@ -113,9 +113,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto"
-                aria-label="Start free trial of ScalePOS restaurant management system"
+                aria-label="Request free demo of ScalePOS restaurant management system"
               >
-                <span>Start Free Trial</span>
+                <span>Request Free Demo</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               
@@ -240,16 +240,6 @@ const Hero = () => {
                     <span className="text-sm font-medium text-gray-600">GST Processed</span>
                     <span className="text-xl lg:text-2xl font-bold text-cyan-600">₹8,156</span>
                   </div>
-                  <div className="bg-cyan-200 rounded-full h-2">
-                    <motion.div
-                      className="bg-cyan-600 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: '45%' }}
-                      transition={{ delay: 1.6, duration: 1 }}
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Floating Elements */}
