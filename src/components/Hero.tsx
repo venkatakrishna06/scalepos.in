@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { ChefHat, Cloud, Smartphone, TrendingUp, ArrowRight } from 'lucide-react';
+import { ChefHat, Cloud, Smartphone, TrendingUp, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center relative overflow-hidden">
+    <header className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -41,58 +41,136 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6 lg:space-y-8 text-center lg:text-left"
           >
+            {/* Trust Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="flex items-center justify-center lg:justify-start space-x-2 text-blue-600"
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="flex items-center justify-center lg:justify-start space-x-2 text-green-600 bg-green-50 px-4 py-2 rounded-full inline-flex"
             >
-              <ChefHat className="w-6 h-6" />
-              <span className="font-semibold text-sm lg:text-base">Restaurant Management Made Simple</span>
+              <CheckCircle className="w-5 h-5" />
+              <span className="font-semibold text-sm lg:text-base">FREE to Start • No Setup Fees</span>
             </motion.div>
 
+            {/* Main Headline - H1 for SEO */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
               className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight"
             >
-              Streamline Your
+              Free Restaurant POS That
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                {' '}Restaurant
+                {' '}Actually Works
               </span>
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>
-              Operations
             </motion.h1>
 
+            {/* Value Proposition Subheadline */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg lg:text-xl text-gray-600 leading-relaxed px-2 lg:px-0"
             >
-              Cloud-based POS system with order tracking, GST customizations, and powerful analytics. 
-              Manage your restaurant from anywhere, anytime.
+              Start managing orders, automate GST billing, and track sales in real-time. 
+              <strong className="text-gray-900"> Completely free to start</strong> - trusted by 5,000+ restaurants across India.
             </motion.p>
 
+            {/* Key Benefits */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex justify-center lg:justify-start px-2 lg:px-0"
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="grid sm:grid-cols-2 gap-3 text-sm lg:text-base"
+            >
+              <div className="flex items-center space-x-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span>Real-time order tracking</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span>Automated GST calculations</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span>Works on any device</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span>Setup in under 5 minutes</span>
+              </div>
+            </motion.div>
+
+            {/* Primary CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 px-2 lg:px-0"
             >
               <motion.button
                 onClick={() => window.dispatchEvent(new CustomEvent('openDemoPopup'))}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-shadow mobile-btn"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto"
+                aria-label="Start free trial of ScalePOS restaurant management system"
               >
-                <span>Request Live Demo</span>
+                <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
+              </motion.button>
+              
+              <motion.button
+                onClick={() => window.dispatchEvent(new CustomEvent('openDemoPopup'))}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-lg font-semibold text-lg hover:border-blue-600 hover:text-blue-600 transition-colors w-full sm:w-auto"
+                aria-label="Watch demo of ScalePOS features"
+              >
+                Watch Demo
               </motion.button>
             </motion.div>
 
+            {/* Social Proof */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-6 text-sm text-gray-600"
+            >
+              <div className="flex items-center space-x-1">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span className="ml-2 font-medium">4.8/5 rating</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="flex -space-x-2">
+                  <img 
+                    src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" 
+                    alt="Restaurant owner testimonial" 
+                    className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                    loading="lazy"
+                  />
+                  <img 
+                    src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" 
+                    alt="Restaurant manager testimonial" 
+                    className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                    loading="lazy"
+                  />
+                  <img 
+                    src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" 
+                    alt="Chef testimonial" 
+                    className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <span>5,000+ restaurants trust us</span>
+              </div>
+            </motion.div>
+
+            {/* Additional Trust Elements */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -105,16 +183,16 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Smartphone className="w-4 h-4" />
-                <span>Mobile Ready</span>
+                <span>Works on any device</span>
               </div>
               <div className="flex items-center space-x-2">
                 <TrendingUp className="w-4 h-4" />
-                <span>Real-time Analytics</span>
+                <span>Real-time analytics</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Animated Dashboard Preview */}
+          {/* Right Content - Dashboard Preview */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -205,7 +283,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

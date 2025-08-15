@@ -31,6 +31,9 @@ const DemoPopup = () => {
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
           onClick={closePopup}
         >
+          role="dialog"
+          aria-labelledby="demo-popup-title"
+          aria-describedby="demo-popup-description"
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -47,11 +50,16 @@ const DemoPopup = () => {
                 onClick={closePopup}
                 className="bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors shadow-lg"
               >
+              aria-label="Close demo request form"
                 <X className="w-5 h-5 lg:w-6 lg:h-6 text-gray-600" />
               </motion.button>
             </div>
 
             {/* Form Content */}
+          {/* Hidden titles for accessibility */}
+          <h2 id="demo-popup-title" className="sr-only">Request Demo Form</h2>
+          <p id="demo-popup-description" className="sr-only">Fill out this form to request a live demo of ScalePOS</p>
+
             <div className="h-[900px] lg:h-[640px]">
               <iframe
                 src="https://golden-name-f02.notion.site/ebd/24c3b9bbb13c8000aa67f1ac3ea2b63f"
@@ -62,6 +70,7 @@ const DemoPopup = () => {
                 className="border-0"
                 title="Demo Request Form"
               />
+              loading="lazy"
             </div>
           </motion.div>
         </motion.div>

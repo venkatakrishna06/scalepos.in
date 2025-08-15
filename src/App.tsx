@@ -6,11 +6,10 @@ import DemoPopup from './components/DemoPopup';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" role="main">
       <Hero />
       <Features />
       <Demo />
-      {/*<Testimonials />*/}
       <Footer />
       <DemoPopup />
     </div>

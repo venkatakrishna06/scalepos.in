@@ -70,7 +70,7 @@ const Demo = () => {
   };
 
   return (
-    <section className="py-12 lg:py-20 bg-white mobile-section">
+    <section className="py-12 lg:py-20 bg-white mobile-section" aria-labelledby="demo-heading">
       <div className="w-full max-w-7xl mx-auto px-3 lg:px-4">
         <motion.div
           ref={ref}
@@ -79,14 +79,14 @@ const Demo = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 lg:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 px-2">
+          <h2 id="demo-heading" className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 px-2">
             See It in
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
               {' '}Action
             </span>
           </h2>
           <p className="text-base lg:text-xl text-gray-600 max-w-3xl mx-auto mb-6 lg:mb-8 px-4 lg:px-0">
-            Experience the power of our restaurant management system with this interactive demo.
+            See how ScalePOS helps restaurants like yours manage orders, track sales, and automate GST billing in real-time.
           </p>
         </motion.div>
 
@@ -109,6 +109,8 @@ const Demo = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
+                aria-pressed={activeTab === tab.id}
+                aria-label={`View ${tab.label} demo`}
               >
                 <tab.icon className="w-5 h-5" />
                 <span>{tab.label}</span>
@@ -134,7 +136,7 @@ const Demo = () => {
                   className="space-y-4 lg:space-y-6"
                 >
                   <div className="bg-white rounded-lg p-4 lg:p-6 shadow-sm">
-                    <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Live Order Dashboard</h3>
+                    <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Live Order Management Dashboard</h3>
                     
                     <div className="grid gap-3 lg:gap-4">
                       {mockOrders.map((order, index) => (
@@ -182,7 +184,7 @@ const Demo = () => {
                   transition={{ duration: 0.5 }}
                   className="bg-white rounded-lg p-4 lg:p-6 shadow-sm"
                 >
-                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Analytics Dashboard</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Real-Time Analytics Dashboard</h3>
                   
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-6 lg:mb-8">
                     {[
@@ -226,7 +228,7 @@ const Demo = () => {
                   transition={{ duration: 0.5 }}
                   className="bg-white rounded-lg p-4 lg:p-6 shadow-sm"
                 >
-                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Mobile Experience</h3>
+                  <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 lg:mb-6">Mobile-First Experience</h3>
                   
                   <div className="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12">
                     <div className="flex space-x-2 lg:space-x-4 scale-75 lg:scale-100">
@@ -284,24 +286,24 @@ const Demo = () => {
                     
                     <div className="text-center lg:text-left">
                       <h4 className="text-lg lg:text-xl font-semibold text-gray-900 mb-3 lg:mb-4">
-                        Native Mobile Experience
+                        Works Perfectly on Mobile
                       </h4>
                       <ul className="space-y-2 text-sm lg:text-base text-gray-600">
                         <li className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
-                          <span>Responsive on all devices</span>
+                          <span>Works on phones, tablets & desktops</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
-                          <span>Offline capability</span>
+                          <span>Works even without internet</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
-                          <span>Touch-optimized interface</span>
+                          <span>Easy-to-use touch interface</span>
                         </li>
                         <li className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500" />
-                          <span>Real-time synchronization</span>
+                          <span>Instant sync across all devices</span>
                         </li>
                       </ul>
                     </div>
@@ -311,22 +313,6 @@ const Demo = () => {
             </AnimatePresence>
           </motion.div>
         </div>
-
-        {/*<motion.div*/}
-        {/*  initial={{ opacity: 0, y: 30 }}*/}
-        {/*  animate={inView ? { opacity: 1, y: 0 } : {}}*/}
-        {/*  transition={{ delay: 0.6, duration: 0.8 }}*/}
-        {/*  className="text-center mt-8 lg:mt-16 px-4"*/}
-        {/*>*/}
-        {/*  <motion.button*/}
-        {/*    whileHover={{ scale: 1.05 }}*/}
-        {/*    whileTap={{ scale: 0.95 }}*/}
-        {/*    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center space-x-2 mx-auto mobile-btn"*/}
-        {/*  >*/}
-        {/*    <Play className="w-4 h-4 lg:w-5 lg:h-5" />*/}
-        {/*    <span>Request Live Demo</span>*/}
-        {/*  </motion.button>*/}
-        {/*</motion.div>*/}
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Main Footer */}
       <div className="w-full max-w-7xl mx-auto px-3 lg:px-4 py-8 lg:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
@@ -61,14 +61,14 @@ const Footer = () => {
             >
               <div className="flex items-center space-x-2 mb-3 lg:mb-4">
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg">
-                  <ChefHat className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  <ChefHat className="w-5 h-5 lg:w-6 lg:h-6 text-white" aria-hidden="true" />
                 </div>
                 <span className="text-xl lg:text-2xl font-bold">ScalePOS</span>
               </div>
               <p className="text-sm lg:text-base text-gray-400 leading-relaxed mb-4 lg:mb-6">
-                The complete restaurant management solution. Streamline operations, 
-                track orders, manage GST compliance, and boost profitability with our 
-                cloud-based POS system.
+                India's most trusted free restaurant POS system. Streamline operations, 
+                automate GST billing, and boost profitability with our cloud-based solution 
+                trusted by 5,000+ restaurants.
               </p>
             </motion.div>
 
@@ -80,15 +80,15 @@ const Footer = () => {
               className="space-y-2 lg:space-y-3"
             >
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" aria-hidden="true" />
                 <span className="text-sm lg:text-base text-gray-400">support@scalepos.in</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" aria-hidden="true" />
                 <span className="text-sm lg:text-base text-gray-400">+91 9360055204</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" />
+                <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400" aria-hidden="true" />
                 <span className="text-sm lg:text-base text-gray-400">Hyderabad, Telangana, India</span>
               </div>
             </motion.div>
@@ -100,13 +100,14 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-blue-400">Product</h3>
+            <h3 className="text-base lg:text-lg font-semibold mb-3 lg:mb-4 text-blue-400">Features</h3>
             <ul className="space-y-1 lg:space-y-2">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
                     className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                    aria-label={`Learn about ${link.name}`}
                   >
                     {link.name}
                   </a>
@@ -128,6 +129,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                    aria-label={`Get help with ${link.name}`}
                   >
                     {link.name}
                   </a>
@@ -149,6 +151,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="text-sm lg:text-base text-gray-400 hover:text-white transition-colors duration-200"
+                    aria-label={`Learn about ${link.name}`}
                   >
                     {link.name}
                   </a>
@@ -183,6 +186,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-xs lg:text-sm"
+                    aria-label={`Read our ${link.name}`}
                   >
                     {link.name}
                   </a>
@@ -206,8 +210,9 @@ const Footer = () => {
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                   className="text-gray-400 hover:text-white transition-colors duration-200"
+                  aria-label={`Follow us on ${social.name}`}
                 >
-                  <social.icon className="w-4 h-4 lg:w-5 lg:h-5" />
+                  <social.icon className="w-4 h-4 lg:w-5 lg:h-5" aria-hidden="true" />
                 </motion.a>
               ))}
             </motion.div>
