@@ -31,9 +31,6 @@ const DemoPopup = () => {
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
           onClick={closePopup}
         >
-          role="dialog"
-          aria-labelledby="demo-popup-title"
-          aria-describedby="demo-popup-description"
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -59,7 +56,7 @@ const DemoPopup = () => {
           <h2 id="demo-popup-title" className="sr-only">Request Demo Form</h2>
           <p id="demo-popup-description" className="sr-only">Fill out this form to request a live demo of ScalePOS</p>
 
-            <div className="h-[900px] lg:h-[640px]">
+            <div className="h-[650px] lg:h-[640px]">
               <iframe
                 src="https://golden-name-f02.notion.site/ebd/24c3b9bbb13c8000aa67f1ac3ea2b63f"
                 width="100%"
