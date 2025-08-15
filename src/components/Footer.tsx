@@ -68,7 +68,7 @@ const Footer = () => {
               <p className="text-sm lg:text-base text-gray-400 leading-relaxed mb-4 lg:mb-6">
                 India's most trusted free restaurant POS system. Streamline operations, 
                 automate GST billing, and boost profitability with our cloud-based solution 
-                trusted by 5,000+ restaurants.
+                trusted by indian restaurants.
               </p>
             </motion.div>
 

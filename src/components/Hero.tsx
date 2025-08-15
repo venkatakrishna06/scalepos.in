@@ -73,7 +73,7 @@ const Hero = () => {
               className="text-lg lg:text-xl text-gray-600 leading-relaxed px-2 lg:px-0"
             >
               Start managing orders, automate GST billing, and track sales in real-time. 
-              <strong className="text-gray-900"> Completely free to start</strong> - trusted by 5,000+ restaurants across India.
+              <strong className="text-gray-900"> Completely free to start</strong> - trusted by restaurants across India.
             </motion.p>
 
             {/* Key Benefits */}
@@ -166,7 +166,7 @@ const Hero = () => {
                     loading="lazy"
                   />
                 </div>
-                <span>5,000+ restaurants trust us</span>
+                <span>Restaurants trust us</span>
               </div>
             </motion.div>
 

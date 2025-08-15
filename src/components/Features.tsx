@@ -8,7 +8,6 @@ import {
   Cloud, 
   Users,
   Clock,
-  Shield,
   Zap
 } from 'lucide-react';
 
@@ -161,7 +160,6 @@ const Features = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
               {[
                 { icon: Clock, title: "Real-time Updates", desc: "Live sync across all devices" },
-                { icon: Shield, title: "Bank-Grade Security", desc: "99.9% uptime guarantee" },
                 { icon: Zap, title: "Lightning Fast", desc: "Optimized for speed" }
               ].map((item, index) => (
                 <div key={index} className="bg-white rounded-lg p-4 lg:p-6 shadow-md text-center">
@@ -187,7 +185,7 @@ const Features = () => {
                 Ready to Transform Your Restaurant?
               </h3>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                Join 5,000+ restaurants already using ScalePOS to streamline operations and boost profits.
+                Join restaurants already using ScalePOS to streamline operations and boost profits.
               </p>
               <motion.button
                 onClick={() => window.dispatchEvent(new CustomEvent('openDemoPopup'))}

@@ -141,7 +141,7 @@ const Testimonials = () => {
         >
           <div className="bg-white rounded-xl p-6 lg:p-8 shadow-lg max-w-2xl mx-auto mobile-card">
             <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-3 lg:mb-4">
-              Join 5,000+ Happy Customers
+              Join our Happy Customers
             </h3>
             <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 px-2 lg:px-0">
               Start your free trial today and experience the difference ScalePOS can make for your business.

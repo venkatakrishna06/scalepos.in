@@ -50,7 +50,6 @@ const DemoPopup = () => {
                 onClick={closePopup}
                 className="bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors shadow-lg"
               >
-              aria-label="Close demo request form"
                 <X className="w-5 h-5 lg:w-6 lg:h-6 text-gray-600" />
               </motion.button>
             </div>
