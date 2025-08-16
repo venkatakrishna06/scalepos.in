@@ -157,7 +157,7 @@ const Features = () => {
               Plus Many More Features
             </h3>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-6">
               {[
                 { icon: Clock, title: "Real-time Updates", desc: "Live sync across all devices" },
                 { icon: Zap, title: "Lightning Fast", desc: "Optimized for speed" }
@@ -192,9 +192,9 @@ const Features = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow"
-                aria-label="Start free trial of ScalePOS"
+                aria-label="Book a demo of ScalePOS"
               >
-                Start Your Free Trial Now
+                Book Demo
               </motion.button>
             </div>
           </motion.div>

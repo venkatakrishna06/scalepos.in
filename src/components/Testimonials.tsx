@@ -144,14 +144,16 @@ const Testimonials = () => {
               Join our Happy Customers
             </h3>
             <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6 px-2 lg:px-0">
-              Start your free trial today and experience the difference ScalePOS can make for your business.
+              Book a demo today and experience the difference ScalePOS can make for your business.
             </p>
             <motion.button
+              onClick={() => window.dispatchEvent(new CustomEvent('openDemoPopup'))}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg shadow-lg hover:shadow-xl transition-shadow mobile-btn"
+              aria-label="Book a demo of ScalePOS"
             >
-              Start Free Trial
+              Book Demo
             </motion.button>
           </div>
         </motion.div>
